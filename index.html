@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FX BOOK</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="UTF-8">
+            <title>London and New York Clock</title>
+            <style>
+              body {
+                background-color: #f2f2f2;
+                text-align: center;
+                font-family: Arial, sans-serif;
+              }
+              h1 {
+                font-size: 48px;
+                margin-top: 50px;
+              }
+              #clocks {
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+              }
+              .clock {
+                margin: 0 20px;
+                border: 2px solid #333;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+              }
+              .clock h2 {
+                font-size: 32px;
+                margin-bottom: 20px;
+              }
+              .clock p {
+                font-size: 24px;
+                margin: 0;
+              }
+            </style>
+          </head>
+          <body>
+            <h1>London and New York Clock</h1>
+            <div id="clocks">
+              <div class="clock">
+                <h2>London</h2>
+                <p id="london-time"></p>
+              </div>
+              <div class="clock">
+                <h2>New York</h2>
+                <p id="newyork-time"></p>
+              </div>
+            </div>
+            <script>
+              function updateTime() {
+                const now = new Date();
+                const londonTime = now.toLocaleString("en-US", {timeZone: "Europe/London", hour: "numeric", minute: "numeric", second: "numeric", hour12: true});
+                const newyorkTime = now.toLocaleString("en-US", {timeZone: "America/New_York", hour: "numeric", minute: "numeric", second: "numeric", hour12: true});
+                document.getElementById("london-time").innerHTML = londonTime;
+                document.getElementById("newyork-time").innerHTML = newyorkTime;
+              }
+              setInterval(updateTime, 10);
+            </script>
+          </body>
+        </html>
+
+        <script src="main.js" async defer></script>
+    </body>
+</html>
