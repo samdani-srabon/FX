@@ -20,35 +20,7 @@
             <meta charset="UTF-8">
             <title>London and New York Clock</title>
             <style>
-              body {
-                background-color: #f2f2f2;
-                text-align: center;
-                font-family: Arial, sans-serif;
-              }
-              h1 {
-                font-size: 48px;
-                margin-top: 50px;
-              }
-              #clocks {
-                display: flex;
-                justify-content: center;
-                margin-top: 50px;
-              }
-              .clock {
-                margin: 0 20px;
-                border: 2px solid #333;
-                border-radius: 10px;
-                padding: 20px;
-                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-              }
-              .clock h2 {
-                font-size: 32px;
-                margin-bottom: 20px;
-              }
-              .clock p {
-                font-size: 24px;
-                margin: 0;
-              }
+              
             </style>
           </head>
           <body>
@@ -64,14 +36,7 @@
               </div>
             </div>
             <script>
-              function updateTime() {
-                const now = new Date();
-                const londonTime = now.toLocaleString("en-US", {timeZone: "Europe/London", hour: "numeric", minute: "numeric", second: "numeric", hour12: true});
-                const newyorkTime = now.toLocaleString("en-US", {timeZone: "America/New_York", hour: "numeric", minute: "numeric", second: "numeric", hour12: true});
-                document.getElementById("london-time").innerHTML = londonTime;
-                document.getElementById("newyork-time").innerHTML = newyorkTime;
-              }
-              setInterval(updateTime, 10);
+              
             </script>
           </body>
         </html>
