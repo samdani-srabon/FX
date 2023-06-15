@@ -6,3 +6,4 @@ function updateTime() {
     document.getElementById("newyork-time").innerHTML = newyorkTime;
   }
   setInterval(updateTime, 10);
+
